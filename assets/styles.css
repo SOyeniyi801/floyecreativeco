@@ -1295,6 +1295,129 @@ img {
   color: #e8b116;
 }
 
+
+/* 404 ERROR PAGE */
+
+.error-page {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 110px 0 130px;
+}
+
+.error-content {
+  width: min(900px, 100% - 64px);
+  margin-inline: auto;
+}
+
+.error-page .eyebrow {
+  margin-bottom: 32px;
+}
+
+.error-number {
+  font-size: clamp(110px, 16vw, 220px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.09em;
+  color: #fff7ed;
+  margin: 0 0 45px;
+}
+
+.error-number span {
+  color: #2876e8;
+}
+
+.error-page h1 {
+  font-size: clamp(42px, 5.5vw, 72px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.06em;
+  color: #fff7ed;
+  margin: 0 0 28px;
+}
+
+.error-page h1 em {
+  font-style: normal;
+  color: #2876e8;
+}
+
+.error-description {
+  max-width: 580px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #d6d6d2;
+  margin: 0 0 36px;
+}
+
+.error-page .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 0;
+}
+
+.error-links {
+  border-top: 1px solid #444;
+  margin-top: 80px;
+  padding-top: 35px;
+}
+
+.error-links .eyebrow {
+  margin-bottom: 22px;
+}
+
+.error-links > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 36px;
+}
+
+.error-links a {
+  color: #fff7ed;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.error-links a:hover {
+  color: #2876e8;
+}
+
+@media (max-width: 680px) {
+  .error-page {
+    min-height: 75vh;
+    padding: 85px 0;
+  }
+
+  .error-content {
+    width: min(100% - 38px, 900px);
+  }
+
+  .error-number {
+    font-size: clamp(100px, 23vw, 160px);
+    margin-bottom: 35px;
+  }
+
+  .error-page h1 {
+    font-size: clamp(36px, 9vw, 55px);
+  }
+
+  .error-description {
+    font-size: 16px;
+  }
+
+  .error-links {
+    margin-top: 65px;
+    padding-top: 28px;
+  }
+
+  .error-links > div {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+
 @media (max-width: 1100px) {
   .video-metrics {
     grid-template-columns: 1fr;
@@ -1563,6 +1686,24 @@ img {
 
   .about-approach {
     gap: 24px;
+  }
+  .error-page {
+    min-height: 65vh;
+    padding: 75px 0;
+  }
+
+  .error-number {
+    font-size: clamp(100px, 25vw, 160px);
+    margin-bottom: 28px;
+  }
+
+  .error-links {
+    margin-top: 55px;
+  }
+
+  .error-links > div {
+    flex-direction: column;
+    gap: 16px;
   }
 }
 
