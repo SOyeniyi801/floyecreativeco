@@ -924,17 +924,21 @@ img {
   gap: 12px;
 }
 
-
 .vertical-grid video {
   display: block;
+
   width: 100%;
+
   height: auto;
+
   aspect-ratio: 9 / 16;
+
   object-fit: cover;
+
   border-radius: 10px;
+
   background: #1c1d1f;
 }
-
 
 .vertical {
   aspect-ratio: 9/16;
@@ -1692,7 +1696,9 @@ img {
 }
 
 /* === Responsive video portfolio corrections === */
+
 /* Let grid items shrink before any embedded player can force overflow. */
+
 .video-project,
 .video-info,
 .video-project > *,
@@ -1701,115 +1707,377 @@ img {
 .vertical-grid,
 .placeholder {
   min-width: 0;
+
   max-width: 100%;
 }
+
 .video-project {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
   gap: clamp(22px, 3vw, 46px);
 }
+
 .video-project .media-landscape {
   width: 100%;
+
   min-width: 0;
+
   aspect-ratio: 16 / 9;
+
   min-height: 0;
+
   position: relative;
+
   overflow: hidden;
+
   padding: 0;
 }
+
 .video-project .media-landscape iframe,
 .video-project .media-landscape video {
   display: block;
+
   position: absolute;
+
   inset: 0;
+
   width: 100%;
+
   height: 100%;
+
   border: 0;
+
   max-width: 100%;
 }
+
 .video-metrics {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+
   gap: 12px;
 }
+
 .render-video {
   width: 100%;
+
   display: flex;
+
   justify-content: center;
+
   align-items: flex-start;
 }
 
 .render-video video {
   width: 100%;
+
   max-width: 280px;
+
   height: auto;
+
   aspect-ratio: 9 / 16;
+
   object-fit: contain;
+
   border-radius: 10px;
+
   background: #1c1d1f;
 }
+
 .video-metrics .metric {
   display: flex;
+
   flex-direction: column;
+
   gap: 5px;
+
   padding: 0;
+
   border: 0;
 }
+
 .video-metrics .metric strong {
   grid-row: auto;
 }
+
 /* Stack entire project, not just stats, on narrow laptops/tablets. */
+
 @media (max-width: 1100px) {
   .video-project {
     grid-template-columns: minmax(0, 1fr);
+
     gap: 24px;
   }
+
   .video-metrics {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 16px;
   }
+
   .video-metrics .metric {
     display: flex;
+
     flex-direction: column;
+
     padding: 0;
+
     border: 0;
   }
+
   .video-metrics .metric strong {
     grid-row: auto;
   }
 }
+
 @media (max-width: 640px) {
   .video-metrics {
     grid-template-columns: 1fr;
+
     gap: 0;
   }
+
   .video-metrics .metric {
     display: grid;
+
     grid-template-columns: minmax(84px, auto) minmax(0, 1fr);
+
     gap: 2px 12px;
+
     padding: 14px 0;
+
     border-bottom: 1px solid #e4e4e4;
   }
+
   .video-metrics .metric:last-child {
     border-bottom: 0;
   }
+
   .video-metrics .metric strong {
     grid-row: span 2;
+
     align-self: center;
   }
+
   .video-project .vertical-grid {
     grid-template-columns: 1fr;
+
     gap: 24px;
+
     width: 100%;
   }
 
   .video-project .vertical {
     width: 100%;
+
     max-width: 360px;
+
     min-height: 0;
+
     aspect-ratio: 9 / 16;
+
     margin-inline: auto;
   }
 
   .render-video video {
     max-width: 260px;
+  }
+}
+
+/* Web design page: website and app audits, process, and pricing */
+
+/* Web design page only: audit and pricing */
+
+.audit-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.6fr);
+  gap: clamp(24px, 5vw, 80px);
+  padding: 32px 0 46px;
+  border-top: 1px solid #d2d2d2;
+  align-items: center;
+}
+
+.audit-intro h3 {
+  font-size: clamp(26px, 3.4vw, 42px);
+  letter-spacing: -0.055em;
+  line-height: 1.16;
+  margin: 0 0 16px;
+}
+
+.audit-intro > p:not(.eyebrow) {
+  max-width: 690px;
+  margin: 0 0 14px;
+  font-size: 16px;
+}
+
+.audit-intro .audit-for {
+  color: #555;
+}
+
+.audit-intro .btn {
+  margin-top: 12px;
+}
+
+.audit-price {
+  background: #1c1d1f;
+  color: #fff7ed;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.audit-price > span,
+.audit-step > span {
+  color: #2876e8;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.audit-price strong {
+  display: block;
+  font-size: clamp(62px, 8vw, 102px);
+  line-height: 1.1;
+  letter-spacing: -0.075em;
+  margin: 18px 0;
+}
+
+.audit-price p {
+  margin: 0;
+  max-width: 230px;
+  color: #d6d6d2;
+  font-size: 14px;
+}
+
+.audit-steps-title {
+  font-size: clamp(24px, 2.7vw, 34px);
+  letter-spacing: -0.045em;
+  margin: 0 0 24px;
+}
+
+.audit-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.audit-step {
+  border-top: 2px solid #2876e8;
+  padding: 20px 12px 4px 0;
+  min-width: 0;
+}
+
+.audit-step h4 {
+  font-size: 17px;
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+  margin: 16px 0 8px;
+}
+
+.audit-step p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.web-pricing {
+  background: #e8eef9;
+}
+
+.web-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.web-price-card {
+  background: #fff;
+  border: 1px solid #cbd7e8;
+  border-radius: 10px;
+  padding: clamp(24px, 3vw, 38px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.web-price-card h3 {
+  font-size: clamp(22px, 2.6vw, 30px);
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+  margin: 0 0 18px;
+}
+
+.web-price {
+  font-size: clamp(42px, 4.5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 1.15;
+  margin: 0 0 18px;
+}
+
+.web-price span {
+  font-size: 14px;
+  color: #626872;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.web-price-card > p:not(.eyebrow) {
+  font-size: 15px;
+  max-width: 420px;
+  margin: 0 0 30px;
+}
+
+.web-price-card .btn {
+  margin-top: auto;
+}
+
+.web-pricing .pricing-followup {
+  margin-top: 24px;
+}
+
+.web-pricing .pricing-followup a {
+  color: #195ac3;
+  font-weight: 800;
+}
+.web-pricing .web-pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+.web-coming-soon {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #236be0;
+  }
+
+  @media (max-width: 960px) {
+    .web-pricing .web-pricing-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+@media (max-width: 900px) {
+  .audit-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .audit-overview,
+  .web-pricing-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .audit-steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .audit-price {
+    padding: 24px;
+  }
+  .web-price-card {
+    padding: 24px;
+  }
+  .web-pricing .web-pricing-grid {
+    grid-template-columns: 1fr;
   }
 }
