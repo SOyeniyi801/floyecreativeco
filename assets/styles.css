@@ -2314,3 +2314,199 @@ img {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   Black Friday + Cyber Monday page (black-friday.html)
+   Reuses: header, page-hero, hero-grid, section-header,
+   project-list / project-top, template-grid, screenshot-slot,
+   btn / blue-btn, note, footer. Only page-specific pieces below.
+   ========================================================= */
+
+   .bf-head-cta {
+    min-height: 44px;
+    padding: 11px 18px;
+    font-size: 13px;
+  }
+  
+  /* Hero on a light background */
+  .bf-hero {
+    padding-bottom: 0;
+  }
+  
+  .bf-hero .hero-grid {
+    align-items: center;
+  }
+  
+  .bf-eyebrow {
+    color: #202124;
+  }
+  
+  .bf-hero .lede {
+    color: #4a4d52;
+    margin-bottom: 28px;
+  }
+  
+  .bf-mark {
+    justify-self: end;
+    width: min(100%, 220px);
+  }
+  
+  .bf-mark img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .bf-strip {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-top: 70px;
+    padding: 18px 0;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    font-size: 13px;
+    font-weight: 800;
+  }
+  
+  /* Offers: project-list rows with a price column */
+  .bf-offers {
+    padding-top: 80px;
+  }
+  
+  .bf-offers .project h3 {
+    font-size: clamp(22px, 2.4vw, 30px);
+    margin-bottom: 8px;
+  }
+  
+  .bf-includes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 10px;
+  }
+  
+  .bf-includes li {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #e8eef9;
+    color: #1c5bc6;
+  }
+  
+  .bf-fine {
+    font-size: 13px;
+    color: #606469;
+    margin: 0;
+  }
+  
+  .bf-price {
+    text-align: right;
+  }
+  
+  .bf-price strong {
+    display: block;
+    font-size: clamp(28px, 3.4vw, 42px);
+    font-weight: 800;
+    letter-spacing: -0.055em;
+    line-height: 1.1;
+  }
+  
+  .bf-price .bf-price-feature {
+    color: #236be0;
+  }
+  
+  .bf-price span {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #606469;
+  }
+  
+  /* Booking: intro + embedded Tally form */
+  .bf-book-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(32px, 5vw, 80px);
+    align-items: start;
+  }
+  
+  .bf-book-intro h2 {
+    font-size: clamp(36px, 4.6vw, 62px);
+    letter-spacing: -0.055em;
+    line-height: 1.08;
+    margin: 0 0 18px;
+  }
+  
+  .bf-book-intro > p:not(.eyebrow) {
+    color: #d6d6d2;
+    font-size: 16px;
+    max-width: 420px;
+    margin: 0;
+  }
+  
+  .bf-steps {
+    list-style: none;
+    padding: 0;
+    margin: 36px 0;
+    border-top: 1px solid #454545;
+  }
+  
+  .bf-steps li {
+    display: flex;
+    gap: 18px;
+    padding: 16px 0;
+    border-bottom: 1px solid #454545;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .bf-steps span {
+    color: #2876e8;
+    font-size: 12px;
+    font-weight: 800;
+    padding-top: 3px;
+  }
+  
+  .bf-book-intro .bf-deadline {
+    color: #e8b116;
+  }
+  
+  .bf-form-card {
+    background: #fff;
+    color: #202124;
+    border-radius: 12px;
+    padding: clamp(22px, 3vw, 36px);
+    min-width: 0;
+  }
+  
+  .bf-form-card iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+  
+  @media (max-width: 960px) {
+    .bf-book-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+  
+  @media (max-width: 680px) {
+    .bf-mark {
+      display: none;
+    }
+  
+    .bf-strip {
+      margin-top: 48px;
+      flex-direction: column;
+    }
+  
+    .bf-price {
+      grid-column: 2;
+      text-align: left;
+    }
+  }
